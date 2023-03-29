@@ -13,7 +13,7 @@ const Movie = (props) => {
   const movies = useSelector((store) => store.movies);
   const movie = movies.find((movie) => movie.id === Number(id));
 
-  const handleDelete = (id) => {
+  const handleDeleteMovie = (id) => {
     // console.log(typeof id);
 
     dispatch(deleteMovie(id));
@@ -51,7 +51,7 @@ const Movie = (props) => {
         <button
           type="button"
           className="myButton bg-red-600 hover:bg-red-500"
-          onClick={() => handleDelete(movie.id)}
+          onClick={() => handleDeleteMovie(movie.id)}
         >
           Sil
         </button>
